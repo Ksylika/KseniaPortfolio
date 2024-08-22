@@ -84,10 +84,12 @@
             display: flex;
             position: relative;
             padding-left: 40px;
+            justify-content: flex-start;
             align-items: center;
             @include tablet-above {
                 &:nth-child(3n-1) {
-                    justify-self: first baseline;
+                    justify-self: last baseline;
+                    width: 50%;
                 }
                 &:nth-child(3n) {
                     justify-self: last baseline;

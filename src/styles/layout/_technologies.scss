@@ -1,0 +1,113 @@
+.technologies {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 130px;
+        margin-bottom: 330px;
+        &-stack {
+            flex-direction: column;
+            row-gap: 55px;
+        }
+        @include desktop {
+            margin-bottom: 230px;
+        }
+
+        @include tablet {
+            row-gap: 100px;
+            margin-bottom: 130px;
+        }
+
+        @include mobile {
+            row-gap: 50px;
+        }
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        row-gap: 55px;
+        &.show {
+            display: flex;
+        }
+
+        &-substack {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        &-container {
+                display: flex;
+                justify-content: space-between;
+                padding-inline: 25px;
+        }
+        
+        &-name {
+            @include fluid-text (36, 20);
+            font-weight: 600;
+        }
+
+        &-level {
+                @include flex-center;
+                @include fluid-text (24, 16);
+                font-weight: 600;
+        }
+            
+    
+        &-progress {
+            position: relative;
+            grid-column: 2 span;
+            height: 32.5px;
+            border-radius: 83px;
+            background-color:#162950;
+            &-line {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+                transition: width 2s ease;
+                border-radius: 83px;
+                }
+        }
+        &-substack {
+            display: flex;
+            position: relative;
+            padding-left: 40px;
+            align-items: center;
+            @include tablet-above {
+                &:nth-child(3n-1) {
+                    justify-self: first baseline;
+                }
+                &:nth-child(3n) {
+                    justify-self: last baseline;
+                }
+            }
+
+            @include tablet {
+                justify-self: baseline;
+                
+            }
+
+
+            &::before {
+                content: '•';
+                position: absolute; 
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+        }
+
+    }
+    }
+}

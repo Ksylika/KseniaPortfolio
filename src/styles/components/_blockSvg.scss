@@ -1,0 +1,11 @@
+.blockSvg {
+    position: absolute;
+    z-index: -10;
+    content: '';
+    background-image: url('./src/image/block/drawing.svg');
+    width: 686px;
+    height: 780px;
+    background-size: contain;
+    top: 32.8vh;
+    right: 0;
+}

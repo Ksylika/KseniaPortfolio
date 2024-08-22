@@ -1,0 +1,134 @@
+.aboutMe {
+    &__title {
+        margin-bottom: 85px;
+
+        @include tablet{
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 25px
+        }
+    }
+
+
+    &__wrapper {
+        @include flex-center;
+        max-width: 1660px;
+        margin-bottom: 400px;
+        
+        @include desktop {
+            margin-bottom: 300px;
+        }
+
+        @include tablet {
+            margin-bottom: 200px;
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+
+        @include mobile {
+            margin-bottom: 100px;
+        }
+    }
+    &__card {
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 5px;
+        @include tablet {
+            flex-direction: row;
+            align-items: center; 
+            width: 100%;
+            height: 150px;
+            column-gap: 20px;
+        }
+
+        @include mobile-s {
+            height: 250px;
+        }
+
+        &-year {
+            @include fluid-text(36, 22);
+            font-weight: 600;
+            @include tablet {
+                flex: 1;
+                text-align: center;
+            }
+        }
+        &-description {
+            display: flex;
+            color: var(--description-color);
+            padding-inline: 20px;
+            text-align: center;
+            @include fluid-text(26, 18);
+            font-style: normal;
+            font-weight: 600;
+            max-width: 394px;
+            height: 252px;
+
+            @include tablet {
+                padding: 0;
+                text-align: start;
+                align-items: center;
+                max-height: 100px;
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        &-timeLine {
+            position: relative;
+            width: 100%;
+            height: 32px;
+            @include tablet {
+                order: -1;
+                height: 100%;
+                width: 32px;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-dot {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &-line {
+                position: absolute;
+                top: 35%;
+                width: 100%;
+                height: 10px;
+                background-color: var(--current-color);
+                @include tablet {
+                    position: relative;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 4px;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+.aboutMe__card:first-of-type .aboutMe__card-timeLine-line {
+    left: 50%;
+
+    @include tablet {
+        top: 50%;
+    }
+}
+
+/* Для последней карточки */
+.aboutMe__card:last-of-type .aboutMe__card-timeLine-line {
+    right: 50%;
+
+    @include tablet {
+        left: 50%;
+        bottom: 50%;
+        height: 50%;
+    }
+}

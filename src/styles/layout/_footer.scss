@@ -1,0 +1,22 @@
+.footer {
+    &__container {
+        @include flex-center;
+        justify-content: space-between;
+        
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: 25px;
+        margin-bottom: 80px;
+        @include mobile-s {
+            flex-direction: column;
+            row-gap: 60px;
+        }
+    }
+
+    &__email {
+        @include fluid-text (42, 24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}

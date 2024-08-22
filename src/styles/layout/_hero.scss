@@ -1,0 +1,30 @@
+.hero {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 255px;
+        row-gap: 34px;
+
+        @include desktop {
+            margin-bottom: 185px;
+        }
+
+        @include mobile {
+            margin-bottom: 100px;
+        }
+    }
+    &__title {
+        margin-bottom: 34px;
+    }
+    &__description {
+        margin-bottom: 40px;
+        
+        &>p {
+            color: var(--description-color);
+            @include fluid-text(36, 24);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}

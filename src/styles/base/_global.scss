@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--backgroung-color);
+    color: var(--current-color);
+}
+a {
+    @include reset-link;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p, li, ol {
+    margin-block: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h2 {
+    @include fluid-text (64, 52);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h3 {
+    @include fluid-text (48, 36);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+img {
+    object-fit: contain;
+}

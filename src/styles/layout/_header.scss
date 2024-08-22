@@ -1,0 +1,82 @@
+.header {
+    display: block;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 137px;
+        padding-block: 45px;
+        margin-bottom: 157px;
+        @include desktop {
+            margin-bottom: 100px;
+        }
+
+        @include tablet {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            padding-block: 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        @include flex-center;
+        width: 124px;
+        @include fluid-text(30, 24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 47px;
+        @include tablet {
+            font-size: xx-large;
+            margin-right: auto;
+        }
+
+        @include mobile {
+            color: transparent;
+        }
+    }
+
+    &__title::before {
+        content: '';
+        margin-right: 12px;
+        background: url("./src/image/logo.svg") no-repeat center / contain;
+        height: 47px;
+        aspect-ratio: 1;
+
+        @include mobile {
+            position: absolute;
+            left: 23px;
+            top: 15px;
+        }
+    }
+
+    &__icons {
+        position: relative;
+        @include tablet {
+            margin-right: 20px;
+        }
+        &-link {
+            position: absolute;
+            content: '';
+            top: -50%;
+            left: -50%;
+            transform: translate(-50%, -50%);
+            background: url("./src/image/icons/git.svg") no-repeat center / contain;
+            width: 32px;
+            aspect-ratio: 1;
+            transition: 0.2ms;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+.git {
+    content: '';
+    background: url("./src/image/icons/git.svg") no-repeat center / contain;
+  }
+
+.tg {
+    content: '';
+    background: url("./src/image/icons/telegram.svg") no-repeat center / contain;
+  }
+
+
+.linkIcon {
+    $icon-width: 32px;
+    $list-width: 140px;
+    &__list {
+        display: flex;
+        width: $list-width;
+        justify-content: space-around;
+        &--wide {
+            width: $list-width * 2;
+            @include mobile {
+                width: 200px;
+            }
+        }
+        &-item {
+            position: relative;
+
+        }
+        &-link {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            transform: translate(-50%, -50%);
+            width: $icon-width;
+            aspect-ratio: 1;
+            transition: 0.2ms;
+            &:hover {
+                opacity: 0.8;
+            }
+            
+        }
+        
+        
+    }
+
+    &--wide {
+        width: $icon-width * 2;
+    }
+}

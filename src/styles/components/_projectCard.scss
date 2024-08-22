@@ -1,0 +1,75 @@
+.projectCard {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 25px;
+    max-width: var(--card-max-width);
+    max-height: 700px;
+    border-radius: 50px 0px;
+    background-color: #0F1624;;
+    box-shadow: 0px 0px 12px 0px #FFF;
+    
+    @include desktop {
+        max-width: var(--card-max-width-dekstop);
+    }
+    @include tablet {
+        margin-inline: auto;
+    }
+
+    @include mobile {
+        width: var(--card-max-width-mobile);
+        row-gap: 20px;
+        padding: 20px;
+    }
+
+    @include mobile-s {
+        width: var(--card-max-width-mobile-s);
+        height: auto;
+    }
+
+    &__image {
+        max-width: 550px;
+        height: auto;
+        @include desktop {
+            max-width: var(--card-max-width-dekstop);
+        }
+        
+        @include mobile {
+            max-width: var(--card-max-width-mobile);
+        }
+
+        @include mobile-s {
+            max-width:var(--card-max-width-mobile-s); 
+        }
+    }
+
+
+    &__title {
+        @include fluid-text(36, 24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 0.88;
+    }
+
+    &__line {
+        width: 60%;
+        height: 4px;
+        border-radius: 83px;
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+    }
+    &__description {
+        @include fluid-text(26, 16);
+        color: var(--description-color);
+        font-weight: 600;
+        max-height: 185px;
+    }
+
+    &__button {
+        @include flex-center;
+        margin-right: auto;
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

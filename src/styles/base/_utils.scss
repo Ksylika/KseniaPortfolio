@@ -1,0 +1,47 @@
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    padding-inline: var(--container-padding-x);
+    margin-inline: auto;
+  }
+  
+.subcontainer {
+
+  $margin-left-subcon: 108px;
+  margin-left: $margin-left-subcon;
+
+  &.small {
+    margin-left: $margin-left-subcon / 2;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  @include desktop {
+    margin-left: $margin-left-subcon / 2;
+  }
+  @include tablet {
+    margin-left: 0;
+  }
+
+
+  @include mobile {
+    margin-left: 0;
+  }
+}
+
+
+.visually-hidden {
+    @include visually-hidden;
+  }
+  
+.hidden-mobile {
+    @include mobile {
+      display: none !important;
+    }
+  }
+  
+.visible-mobile {
+    @include mobile-above {
+      display: none !important;
+    }
+  }

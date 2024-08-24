@@ -1,11 +1,19 @@
-// Функция для создания и добавления карточки проекта
 class ProjectManager {
-  constructor(projectCard, frontendSkills, backendSkills, subSkills, aboutMe) {
+  constructor(projectCard, frontendSkills, backendSkills, subSkills, aboutMe, moreInfoList) {
+    this.moreInfoContainer = document.querySelector(moreInfoList)
     this.projectCardContainer = document.querySelector(projectCard);
     this.frontendContainer = document.getElementById(frontendSkills);
     this.backendContainer = document.getElementById(backendSkills); 
     this.subSkillsContainer = document.querySelector(subSkills);
     this.aboutMeContainer = document.querySelector(aboutMe);
+    this.validateContainers();
+  }
+  
+  
+  validateContainers() {
+    if (!this.projectCardContainer || !this.frontendContainer || !this.backendContainer || !this.subSkillsContainer || !this.aboutMeContainer) {
+      throw new Error("One or more DOM elements not found. Please check your selectors.");
+    }
   }
   
   createProjectCard(project) {
@@ -108,7 +116,8 @@ const projectManagerPacket = new ProjectManager(
   'frontend',
   'backend',
   '.technologies__list-substack',
-  '.aboutMe__wrapper'
+  '.aboutMe__wrapper',
+  '.hero__more-info-list'
 )
 
 const projects = [
@@ -202,17 +211,17 @@ const subSkills = [
 const aboutMe = [
   {
     year: '2021',
-    description: 'Я завершила обучение в колледже "МГОК" по специальности системного администрирования.'
+    description: 'Я завершила обучение в колледже "МГОК" по специальности системного администрирования'
   },
   {
     year: '2021 - н.в.',
     description: `
     На нынешней работе, прошла путь от мл. Системного администратора до Старшей группы Системного администрирования. 
-    Выполняя различные задачи от тех. поддержки до написания скриптов и веб. разработки.`
+    Выполняя различные задачи от тех. поддержки до написания скриптов и веб. разработки`
   },
   {
     year: '2023 - н.в.',
-    description: `Я учусь в университете Витте, на прикладной информатики по специализации Искусственный интеллект и анализ данных.`
+    description: `Я учусь в университете Витте, на прикладной информатики по специализации Искусственный интеллект и анализ данных`
   }
   
 ]
@@ -224,6 +233,20 @@ projectManagerPacket.createMultipleFrontendList(frontendSkills);
 projectManagerPacket.createMultipleBackendList(backendSkills);
 projectManagerPacket.createMultipleSubSkills(subSkills);
 projectManagerPacket.createMultipleAboutMeCard(aboutMe);
+
+const buttonMoreInfo = () => {
+  const moreInfo = document.getElementById('more-info');
+  
+  const moreInfoContainer = document.querySelector('.more-info')
+  moreInfo.addEventListener('click', () => {
+    moreInfoContainer.classList.add('show');
+  });
+}
+
+
+
+
+
 
 
 const burgerbutton = () => {
@@ -297,6 +320,9 @@ const techButton = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  
+  buttonMoreInfo();
+  
   
   burgerbutton();
   

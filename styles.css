@@ -1,12 +1,12 @@
 @charset "UTF-8";
 :root {
   --font-family: "Poppins", sans-serif;
-  --backgroung-color: #0F1624;
+  --background-color: #0F1624;
   --current-color: #fff;
   --margin-left: 192px;
   --container-width: 1428px;
   --container-padding-x: 25px;
-  --description-color: #dfdfdf;
+  --description-color: #c4c3c3;
   --card-max-width: 550px;
   --card-max-width-dekstop: 400px;
   --card-max-width-mobile: 350px;
@@ -342,7 +342,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--backgroung-color);
+  background-color: var(--background-color);
   color: var(--current-color);
 }
 
@@ -562,6 +562,9 @@ img {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--current-color);
   font-size: 28px;
   font-style: normal;
@@ -712,9 +715,6 @@ img {
   max-height: 185px;
 }
 .projectCard__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: auto;
   width: 200px;
   height: 60px;
@@ -1040,6 +1040,16 @@ img {
   .aboutMe__title {
     margin-bottom: 25px;
   }
+}
+.aboutMe__description {
+  margin-bottom: 50px;
+}
+.aboutMe__description > p {
+  color: var(--description-color);
+  font-size: clamp(18px, 1.8055555556vw, 26px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .aboutMe__wrapper {
   display: flex;

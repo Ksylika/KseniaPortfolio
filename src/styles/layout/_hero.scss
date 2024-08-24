@@ -4,7 +4,7 @@
         flex-direction: column;
         margin-bottom: 255px;
         row-gap: 34px;
-
+        
         @include desktop {
             margin-bottom: 185px;
         }
@@ -27,4 +27,5 @@
             line-height: normal;
         }
     }
+
 }

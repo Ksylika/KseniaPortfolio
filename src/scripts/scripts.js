@@ -165,16 +165,10 @@ const frontendSkills = [
   },
   {
     title: 'Vue',
-    level: 'Начальный',
-    levelScore: '30',
+    level: 'Средний',
+    levelScore: '60',
   },
-  {
-    title: 'React',
-    level: 'Начальный',
-    levelScore: '30',
-  },
-  
-  
+
 ]
 
 const backendSkills = [
@@ -192,11 +186,6 @@ const backendSkills = [
     title: 'MySQL',
     level: 'Средний',
     levelScore: '60',
-  },
-  {
-    title: 'Django',
-    level: 'Начальный',
-    levelScore: '30',
   },
 ]
 

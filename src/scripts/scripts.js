@@ -128,16 +128,16 @@ const projects = [
     githubLink: 'https://github.com/Ksylika/KseniaPortfolio'
   },
   {
-    imgSrc: './src/image/comingSoonPlaceholder2.jpg',
-    title: 'Проект в разработке',
-    description: 'В этом месте вскоре появится новый проект, который станет отражением моего стремления к совершенству и инновациям. Я намерена показать,  как можно сочетать творчество и технологии.',
-    githubLink: '#'
+    imgSrc: './src/image/kropp-fitness.jpg',
+    title: 'Сайт Kropp Fitness',
+    description: 'Учебный проект по верстке с использованием адаптивной верстки. Проект реализован с использованием HTML, CSS, адаптивная верстка.',
+    githubLink: 'https://github.com/Ksylika/kropp-fitness-project'
   },
   {
-    imgSrc: './src/image/comingSoonPlaceholder2.jpg',
-    title: 'Проект в разработке',
-    description: 'В этом месте вскоре появится новый проект, который станет отражением моего стремления к совершенству и инновациям. Я намерена показать,  как можно сочетать творчество и технологии.',
-    githubLink: '#'
+    imgSrc: './src/image/TheaterProject.jpg',
+    title: 'Сайт Афиша Театра',
+    description: 'Учебный проект по верстке, только декстоп версия. Проект реализован с использованием HTML, CSS.',
+    githubLink: 'https://github.com/Ksylika/Theater-Project'
   },
   {
     imgSrc: './src/image/comingSoonPlaceholder2.jpg',
@@ -168,7 +168,7 @@ const frontendSkills = [
     level: 'Средний',
     levelScore: '60',
   },
-
+  
 ]
 
 const backendSkills = [

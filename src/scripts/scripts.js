@@ -122,6 +122,12 @@ const projectManagerPacket = new ProjectManager(
 
 const projects = [
   {
+    imgSrc: './src/image/WeatherApp.jpg',
+    title: 'Погодное приложение',
+    description: 'Проект реализован с использованием HTML, CSS, Vue.js, Tailwind. Также в нем использует два бесплатных API для поиска городов и погодных данных.',
+    githubLink: 'https://github.com/Ksylika/Weather-APP'
+  },
+  {
     imgSrc: './src/image/kseniaPorfolio.jpg',
     title: 'Личный сайт портфолио',
     description: 'Проект реализован с использованием HTML, CSS, JavaScript и SASS. Применены методология БЭМ и адаптивная верстка, что обеспечивает структурированность кода и удобство просмотра.',
@@ -138,12 +144,6 @@ const projects = [
     title: 'Сайт Афиша Театра',
     description: 'Учебный проект по верстке, только декстоп версия. Проект реализован с использованием HTML, CSS.',
     githubLink: 'https://github.com/Ksylika/Theater-Project'
-  },
-  {
-    imgSrc: './src/image/comingSoonPlaceholder2.jpg',
-    title: 'Проект в разработке',
-    description: 'В этом месте вскоре появится новый проект, который станет отражением моего стремления к совершенству и инновациям. Я намерена показать,  как можно сочетать творчество и технологии.',
-    githubLink: '#'
   },
 ];
 
